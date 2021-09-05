@@ -4,7 +4,7 @@
 
 ## Overview / Motivation
 
-A general purpose front end project template meant to get up and running fast. Comes with basic landing page, about page, signup, signin.
+A general purpose front end project template meant to get up and running fast. Built with Nextjs, Material Ui, and Redux Toolkit. Comes with basic landing page, about page, signup, signin.
 
 ## Links & Resources
 

@@ -58,7 +58,9 @@ export default function SignInSide() {
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
+            <NextLink href="/">
+              <LockOutlinedIcon />
+            </NextLink>
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign in
@@ -101,8 +103,8 @@ export default function SignInSide() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
+                <Link variant="body2">
+                  <NextLink href="/">Back to Home Page</NextLink>
                 </Link>
               </Grid>
               <Grid item>

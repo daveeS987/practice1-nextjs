@@ -1,4 +1,10 @@
-# Practicing Next JS
+# General Purpose Front End Template
+
+## Author: Davee Sok
+
+## Overview / Motivation
+
+A general purpose front end project template meant to get up and running fast. Comes with basic landing page, about page, signup, signin.
 
 ## Links & Resources
 

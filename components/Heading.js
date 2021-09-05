@@ -6,6 +6,7 @@ import {
   Link,
   makeStyles,
 } from '@material-ui/core';
+import NextLink from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
@@ -39,12 +40,12 @@ export default function Heading({ title }) {
           <Grid container spacing={2} justifyContent="center">
             <Grid item>
               <Button variant="contained" color="primary">
-                Main call to action
+                <NextLink href="/">Go to Home Page</NextLink>
               </Button>
             </Grid>
             <Grid item>
               <Button variant="outlined" color="primary">
-                Secondary action
+                <NextLink href="/about">Go To About Page</NextLink>
               </Button>
             </Grid>
           </Grid>

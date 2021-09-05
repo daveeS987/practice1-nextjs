@@ -39,7 +39,7 @@ export default function ButtonAppBar() {
             </NextLink>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Davee's General Purpose Project Template
+            General Purpose Project Template
           </Typography>
           <Button color="inherit">
             <NextLink href="/signin">Login</NextLink>

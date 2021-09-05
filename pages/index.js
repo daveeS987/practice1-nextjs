@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <Heading />
+        <Heading title={'Main Page'} />
         <Body />
       </Layout>
     </>

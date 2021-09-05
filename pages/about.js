@@ -1,10 +1,11 @@
 import Layout from '../components/Layout';
+import Heading from '../components/Heading';
 
 function About() {
   return (
     <>
       <Layout>
-        <h1>About Page</h1>
+        <Heading title={'About Page'} />
       </Layout>
     </>
   );

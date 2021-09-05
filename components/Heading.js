@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Heading() {
+export default function Heading({ title }) {
   const classes = useStyles();
 
   return (
@@ -30,7 +30,7 @@ export default function Heading() {
           color="textPrimary"
           gutterBottom
         >
-          Heading
+          {title}
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" paragraph>
           Some description or blurb about the page.

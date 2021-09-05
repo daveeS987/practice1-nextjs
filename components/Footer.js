@@ -19,16 +19,14 @@ export default function StickyFooter() {
 
   return (
     <footer className={classes.footer}>
-      <Typography variant="h6" align="center" gutterBottom>
+      <Typography variant="h6" align="center">
         Footer
       </Typography>
-      <Typography
-        variant="subtitle1"
-        align="center"
-        color="textSecondary"
-        component="p"
-      >
+      <Typography align="center" color="textSecondary">
         A general purpose footer!
+      </Typography>
+      <Typography align="center">
+        <NextLink href="/about">Go To About Page</NextLink>
       </Typography>
       <Copyright />
     </footer>

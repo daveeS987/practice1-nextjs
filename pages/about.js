@@ -35,13 +35,13 @@ function About() {
     <>
       <Layout>
         <Heading title={'About Page'} />
-        <Container className={classes.cardGrid} maxWidth="md">
+        <Container className={classes.cardGrid} maxWidth="lg">
           <Grid container spacing={4}>
             <Grid item key={1} xs={12}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
+                  image="https://www.rcrwireless.com/wp-content/uploads/2016/08/11888402_l.jpg"
                   title="Image title"
                 />
                 <CardContent className={classes.cardContent}>

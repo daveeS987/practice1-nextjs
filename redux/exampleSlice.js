@@ -53,7 +53,6 @@ const exampleSlice = createSlice({
   },
   extraReducers: {
     [getApiData.fulfilled]: (state, action) => {
-      console.log('line 60: ', action.payload);
       state.entities = action.payload.reduce((acc, cur) => {
         acc[cur.id] = cur;
         return acc;

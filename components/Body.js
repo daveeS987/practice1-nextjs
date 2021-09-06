@@ -10,6 +10,9 @@ import {
   Link,
   makeStyles,
 } from '@material-ui/core';
+import NextLink from 'next/link';
+
+import { useSelector, useDispatch } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -29,16 +32,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 function Body() {
+  const apiData = useSelector((state) => state.exampleSlice.entities);
+
   const classes = useStyles();
   return (
     <>
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
-          {cards.map((card) => (
-            <Grid item key={card} xs={12} sm={6} md={4}>
+          {Object.values(apiData).map((data) => (
+            <Grid item key={data.id} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -47,16 +50,13 @@ function Body() {
                 />
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Heading
+                    {data.title}
                   </Typography>
-                  <Typography>
-                    This is a media card. You can use this section to describe
-                    the content.
-                  </Typography>
+                  <Typography>{data.body}</Typography>
                 </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    View
+                    <NextLink href={`/detail/${data.id}`}>Details</NextLink>
                   </Button>
                 </CardActions>
               </Card>

@@ -2,6 +2,8 @@ import '../styles/globals.css';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 import { createTheme } from '@material-ui/core/styles';
+import { store } from '../redux';
+import { Provider } from 'react-redux';
 
 const theme = createTheme({
   palette: {
@@ -16,7 +18,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <CssBaseline />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
       </ThemeProvider>
     </>
   );

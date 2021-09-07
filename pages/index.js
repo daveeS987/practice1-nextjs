@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 import Layout from '../components/Layout';
 import Heading from '../components/Heading';
 import OneItem from '../components/OneItem';

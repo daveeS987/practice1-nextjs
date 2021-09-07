@@ -1,13 +1,3 @@
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-  Container,
-  makeStyles,
-} from '@material-ui/core';
-
 import Layout from '../components/Layout';
 import Heading from '../components/Heading';
 import OneItem from '../components/OneItem';

@@ -40,17 +40,22 @@ export default function Heading({ title, description }) {
           <Grid container spacing={2} justifyContent="center">
             <Grid item>
               <Button variant="contained" color="primary">
-                <NextLink href="/">Static Site Generation</NextLink>
+                <NextLink href="/">Home Page</NextLink>
               </Button>
             </Grid>
             <Grid item>
               <Button variant="contained" color="primary">
-                <NextLink href="/dynamic">Client Side Rendered</NextLink>
+                <NextLink href="/ssgPage">Static Site Generated</NextLink>
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button variant="contained" color="primary">
+                <NextLink href="/csrPage">Client Side Rendered</NextLink>
               </Button>
             </Grid>
             <Grid item>
               <Button variant="outlined" color="primary">
-                <NextLink href="/about">Go To About Page</NextLink>
+                <NextLink href="/about">About Page</NextLink>
               </Button>
             </Grid>
           </Grid>

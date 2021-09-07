@@ -2,32 +2,19 @@ import axios from 'axios';
 
 import Layout from '../components/Layout';
 import Heading from '../components/Heading';
-import SsgBody from '../components/SsgBody';
+import OneItem from '../components/OneItem';
 
-export async function getStaticProps(context) {
-  let result = await axios.get('https://jsonplaceholder.typicode.com/posts');
-  result = result.data.slice(0, 9);
-  const initialData = result.reduce((acc, cur) => {
-    acc[cur.id] = cur;
-    return acc;
-  }, {});
-
-  return {
-    props: { initialData },
-  };
-}
-
-export default function Home({ initialData }) {
+export default function Home() {
   return (
     <>
       <Layout>
-        <Heading
-          title={'Landing Page - SSG'}
-          description={
-            'This landing page is an example of Static Site Generation. The page is generated on build from the server. This uses getStaticProps and getStaticPaths to build the dynamic routes. It will grab data from an api and put it into props.'
+        <Heading title={'Landing Page'} description={'The Home Page'} />
+        <OneItem
+          imageUrl={
+            'https://previews.123rf.com/images/monsitj/monsitj1707/monsitj170700082/82427415-programming-code-abstract-technology-background-of-software-developer-and-computer-script.jpg'
           }
+          description={'home'}
         />
-        <SsgBody initialData={initialData} />
       </Layout>
     </>
   );

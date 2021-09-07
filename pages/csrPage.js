@@ -8,7 +8,7 @@ import Body from '../components/Body';
 
 import { getApiData } from '../redux/exampleSlice';
 
-function Dynamic() {
+function ClientSideRenderedPage() {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,4 +29,4 @@ function Dynamic() {
   );
 }
 
-export default Dynamic;
+export default ClientSideRenderedPage;

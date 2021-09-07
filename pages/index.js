@@ -1,25 +1,33 @@
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import axios from 'axios';
 
 import Layout from '../components/Layout';
 import Heading from '../components/Heading';
-import Body from '../components/Body';
+import SsgBody from '../components/SsgBody';
 
-import { getApiData } from '../redux/exampleSlice';
+export async function getStaticProps(context) {
+  let result = await axios.get('https://jsonplaceholder.typicode.com/posts');
+  result = result.data.slice(0, 9);
+  const initialData = result.reduce((acc, cur) => {
+    acc[cur.id] = cur;
+    return acc;
+  }, {});
 
-export default function Home() {
-  const dispatch = useDispatch();
+  return {
+    props: { initialData },
+  };
+}
 
-  useEffect(() => {
-    // this initializes our data
-    dispatch(getApiData());
-  }, []);
-
+export default function Home({ initialData }) {
   return (
     <>
       <Layout>
-        <Heading title={'Main Page'} />
-        <Body />
+        <Heading
+          title={'Landing Page - SSG'}
+          description={
+            'This landing page is an example of Static Site Generation. The page is generated on build from the server. This uses getStaticProps and getStaticPaths to build the dynamic routes. It will grab data from an api and put it into props.'
+          }
+        />
+        <SsgBody initialData={initialData} />
       </Layout>
     </>
   );

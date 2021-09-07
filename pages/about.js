@@ -34,7 +34,10 @@ function About() {
   return (
     <>
       <Layout>
-        <Heading title={'About Page'} />
+        <Heading
+          title={'About Page'}
+          description={'About page description goes here'}
+        />
         <Container className={classes.cardGrid} maxWidth="lg">
           <Grid container spacing={4}>
             <Grid item key={1} xs={12}>

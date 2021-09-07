@@ -18,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Heading({ title }) {
+export default function Heading({ title, description }) {
   const classes = useStyles();
 
   return (
     <div className={classes.heroContent}>
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <Typography
           component="h1"
           variant="h2"
@@ -34,13 +34,18 @@ export default function Heading({ title }) {
           {title}
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-          Some description or blurb about the page.
+          {description}
         </Typography>
         <div className={classes.heroButtons}>
           <Grid container spacing={2} justifyContent="center">
             <Grid item>
               <Button variant="contained" color="primary">
-                <NextLink href="/">Go to Home Page</NextLink>
+                <NextLink href="/">Static Site Generation</NextLink>
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button variant="contained" color="primary">
+                <NextLink href="/dynamic">Client Side Rendered</NextLink>
               </Button>
             </Grid>
             <Grid item>

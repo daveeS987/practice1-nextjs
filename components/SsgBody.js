@@ -12,8 +12,6 @@ import {
 } from '@material-ui/core';
 import NextLink from 'next/link';
 
-import { useSelector } from 'react-redux';
-
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
@@ -32,15 +30,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Body() {
+function SsgBody({ initialData }) {
   const classes = useStyles();
-  const apiData = useSelector((state) => state.exampleSlice.entities);
 
   return (
     <>
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
-          {Object.values(apiData).map((data) => (
+          {Object.values(initialData).map((data) => (
             <Grid item key={data.id} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 <CardMedia
@@ -56,7 +53,7 @@ function Body() {
                 </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    <NextLink href={`/detail/${data.id}`}>Details</NextLink>
+                    <NextLink href={`/ssgDetail/${data.id}`}>Details</NextLink>
                   </Button>
                 </CardActions>
               </Card>
@@ -68,4 +65,4 @@ function Body() {
   );
 }
 
-export default Body;
+export default SsgBody;

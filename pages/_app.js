@@ -16,8 +16,8 @@ const theme = createTheme({
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <CssBaseline />
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Provider store={store}>
           <Component {...pageProps} />
         </Provider>
